@@ -30,6 +30,9 @@ app.get("/regenerate-headline", (req, res) => {
   const headline = headlines[Math.floor(Math.random() * headlines.length)];
   res.json({ headline });
 });
+app.get("/", (req, res) => {
+  res.send("Backend is up and running 🚀");
+});
 
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
